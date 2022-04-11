@@ -1,17 +1,8 @@
 var type = new Typed('.typing-text',{
-    strings : [ 'web designer', 'front end developer', 'graphic designer', 'photographer' ],
+    strings : [,'student', 'future engineer','full stack developer', 'content creator', 'enthusiastic' ],
     typeSpeed: 120,
     loop:true
 });
-
-let themeColor = document.querySelectorAll('.theme-toggler span');
-themeColor.forEach(color => color.addEventListener('click', () =>{
-    let background = color.style.background;
-    document.querySelector('body').style.background = background;
-}));
-
-
-
 
 
 
@@ -53,3 +44,29 @@ $(document).ready(function(){
     });
   
 });
+
+
+const contactForm = document.getElementById("formContacto")
+const errorDiv = document.getElementById("error")
+
+contactForm.onsubmit = function(event){
+    event.preventDefault()
+    console.log(event)
+    const nombre = event.target.name.value
+    const email = event.target.email.value
+    const asunto = event.target.asunt.value
+    const mensaje = event.target.message.value
+
+    
+    if(nombre!="" && email!="" && asunto!="" && mensaje!=""){
+        console.log("Datos correctos!")
+        event.target.submit()
+    }else{
+        errorDiv.innerHTML=""
+        const p = document.createElement("p")
+        p.innerText = "Datos incorrectos! Favor de verificar"
+        errorDiv.appendChild(p)
+    }
+
+    // Regular expresions
+}

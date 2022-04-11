@@ -1,7 +1,8 @@
  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
 :root{
-    --yellow:#f9ca24;
+    --yellow: #f1889b;
+    --rosepastel: #BD6F95;
 }
 
 *{
@@ -24,7 +25,8 @@ html{
     overflow-x: hidden;
 }
 
-/* html::-webkit-scrollbar{
+/* Barra Scroll */
+html::-webkit-scrollbar{
     width:1.4rem;
 }
 
@@ -34,8 +36,8 @@ html::-webkit-scrollbar-track{
 
 html::-webkit-scrollbar-thumb{
     background:var(--yellow);
-} */
-
+}
+/*  */
 body{
     background:aqua;
     overflow-x: hidden;
@@ -198,55 +200,17 @@ header .navbar ul li a:hover{
     color: var(--yellow);
 }
 
-
-
-
-
-.home .share{
-    /* position: absolute;
-    left:50%; bottom:5rem; */
-    /* transform: translateX(-50%); */
-    display: flex;
-    padding:1rem;
-    flex-wrap: wrap;
-    /* border-radius: 1rem;
-    background: rgba(255,255,255,.1);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-    transition: .2s linear; */
-}
-
-.home .share a{
-    background: rgba(255,255,255,.2);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-    padding:1rem 2rem;
-    margin:1rem;
-    color:#fff;
-    font-size: 2rem;
-    border-radius: 1rem;
-}
-
-.home .share a:hover{
-    background:rgba(255,255,255,.5);
-    color:#555;
-}
-
 /* home */
 
 /* ********************about ************************/
-.about{
-    background-color: green;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .about .row{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding:1rem 0;
+    padding:1rem;
 }
-
+    
 .about .row .info{
     flex:1 1 48rem;
     padding:2rem 1rem;
@@ -265,6 +229,7 @@ header .navbar ul li a:hover{
     padding:0 .5rem;
 }
 
+
 .about .row .counter{
     flex:1 1 48rem;
     display: flex;
@@ -272,32 +237,12 @@ header .navbar ul li a:hover{
     flex-wrap: wrap;
 }
 
-.about .row .counter .box{
-    width:20rem;
-    background:#222;
-    text-align: center;
-    padding: 2rem;
-    margin:2rem;
-}
-
-.about .row .counter .box span{
-    font-size: 4rem;
-    color:var(--yellow);
-}
-
-.about .row .counter .box h3{
-    font-size: 2rem;
-    color:#fff;
-}
-
-
-
-.about .skills{
-    padding:1rem 0;
+.about .row .counter .skills{
+    padding:1rem 0rem;
     width: 90%;
 }
 
-.about .skills .progress{
+.about .row .counter .skills .progress{
     margin:1.5rem 0;
     padding:1rem;
     box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
@@ -305,14 +250,14 @@ header .navbar ul li a:hover{
     border-radius: 1rem;
 }
 
-.about .skills .progress h3{
+.about .row .counter .skills .progress h3{
     display: flex;
     justify-content: space-between;
     font-size: 2rem;
     color:#fff;
 }
 
-.about .skills .progress .bar{
+.about .row .counter .skills .progress .bar{
     position: relative;
     width: 100%;
     height:.3rem;
@@ -320,40 +265,217 @@ header .navbar ul li a:hover{
     background:#555;
 }
 
-.about .skills .progress .bar span{
+.about .row .counter .skills .progress .bar span{
     position: absolute;
     top:0; left: 0;
     height:100%;
     width:100%;
-    background:#fff;
+    background:var(--yellow);
 }
 
-.about .skills .progress:nth-child(1) .bar span{
+
+.about .row .counter .skills .progress:nth-child(1) .bar span{
     width:95%;
 }
 
-.about .skills .progress:nth-child(2) .bar span{
+.about .row .counter .skills .progress:nth-child(2) .bar span{
     width:85%;
 }
 
-.about .skills .progress:nth-child(3) .bar span{
+.about .row .counter .skills .progress:nth-child(3) .bar span{
     width:65%;
 }
+.about .row .counter .skills .progress:nth-child(4) .bar span{
+    width:85%;
+}
+.about .row .counter .skills .progress:nth-child(5) .bar span{
+    width:90%;
+}
 
-.about .skills .progress:nth-child(4) .bar span{
-    width:70%;
+
+
+/**************** Education*********************** */
+
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background:#222;
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color:#fff;
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#fff;
+    background:var(--yellow);
+}
+
+
+/************** Portofolio *****************/
+
+.portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+
+.portfolio .box-container .box{
+    height: 20rem;
+    width:26rem;
+    border-radius: 1rem;
+    margin:2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.portfolio .box-container .box:hover img{
+    transform: scale(1.2);
 }
 
 
 
 
+/********************* Contact *****************/
 
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.contact .row .content{
+    flex:1 1 30rem;
+    padding:4rem;
+    padding-bottom: 0;
+}
 
+.contact .row form{
+    flex:1 1 45rem;
+    padding:2rem;
+    margin:2rem;
+    margin-bottom: 4rem;
+}
 
+.contact .row form .box{
+    padding:1.5rem;
+    margin:1rem 0;
+    background:black;
+    color:#fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width:100%;
+}
 
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
 
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
 
+.contact .row form .error p{
+    padding:1rem;
+    color: red;
+    font-size: 1.7rem;
+    
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color:#eee;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color:var(--yellow);
+}
+
+.contact .row .content .share{
+    /* position: absolute;
+    left:50%; bottom:5rem; */
+    /* transform: translateX(-50%); */
+    display: flex;
+    padding:1rem;
+    flex-wrap: wrap;
+    /* border-radius: 1rem;
+    background: rgba(255,255,255,.1);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    transition: .2s linear; */
+}
+
+.contact .row .content .share a{
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    padding:1rem 2rem;
+    margin:1rem;
+    color:#fff;
+    font-size: 2rem;
+    border-radius: 1rem;
+}
+
+.contact .row .content .share a:hover{
+    background:rgba(255,255,255,.5);
+    color:#555;
+}
 
 
 
@@ -410,7 +532,7 @@ header .navbar ul li a:hover{
         margin:0 3rem;
     }
 
-    .about .row .counter .box{
+    .about .row .counter .skills{
         width: 100%;
     }
  
