@@ -1,10 +1,9 @@
  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
 :root{
-    --yellow: #f1889b;
-    --rosepastel: #BD6F95;
+    --rose: #f1889b;
 }
-
+/* aplicar a todo */
 *{
     font-family: 'Nunito', sans-serif;
     margin:0; padding:0;
@@ -14,11 +13,11 @@
     text-transform: capitalize;
     transition: all .2s linear;
 }
-
-/* *::selection{
-    background:var(--yellow);
+/* al seleccionar alguna cosa poner en rose */
+*::selection{
+    background:var(--rose);
     color:#333;
-} */
+}
 
 html{
     font-size: 62.5%;
@@ -35,9 +34,9 @@ html::-webkit-scrollbar-track{
 }
 
 html::-webkit-scrollbar-thumb{
-    background:var(--yellow);
+    background:var(--rose);
 }
-/*  */
+
 body{
     background:aqua;
     overflow-x: hidden;
@@ -48,7 +47,8 @@ section{
     min-height: 100vh;
     padding:1rem;
 }
-/* home */
+
+/* botom */
 .btn{
     padding:.7rem 3rem;
     background:#333;
@@ -65,10 +65,10 @@ section{
 }
 
 .btn:hover{
-    background:var(--yellow);
+    background:var(--rose);
 }
 
-/* about */
+/* titulos de cada seccion */
 .heading{
     text-align: center;
     margin:0 6rem;
@@ -93,13 +93,13 @@ header{
     text-align: center;
 }
 
-header .user img{
+header .user .profilepic{
     height:17rem;
     width:17rem;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    /* border:.7rem solid var(--yellow); */
+    border:.3rem solid var(--rose);
 }
 
 header .user .name{
@@ -116,13 +116,12 @@ header .navbar{
     width:100%;
 }
 
-header .navbar ul{
+header .navbar .navbar__links{
     list-style: none;
     padding:1rem 3rem;
 }
 
-
-header .navbar ul li a{
+header .navbar .navbar__links .navbar_link{
     display: block;
     padding:1rem;
     margin:1.5rem 0;
@@ -132,11 +131,9 @@ header .navbar ul li a{
     border-radius: 5rem;
 }
 
-header .navbar ul li a:hover{
-    background:var(--yellow);
+header .navbar .navbar__links .navbar_link:hover{
+    background:var(--rose);
 }
-
-
 
 #menu{
     position: fixed;
@@ -152,20 +149,16 @@ header .navbar ul li a:hover{
 /******************* HEADER End**********************/
 
 .container{
-    /* margin: 2rem 2rem 2rem 4rem; */
     background-color: #333;
 }
 
-/* HOME */
+/***************** HOME Start *************************/
 .home{
     display: flex;
     justify-content: center;
     flex-flow: column;
     padding:0 14rem; 
-    /* background-color: #333; */
-    /* margin: 2rem 2rem 2rem 4rem; nat */
-    height: 100%; /*nat */
-    /* border-radius: 1.5rem;  */
+    height: 100%; 
 }
 
 .home h3{
@@ -179,7 +172,7 @@ header .navbar ul li a:hover{
 }
 
 .home h1 span{
-    color:var(--yellow);
+    color:var(--rose);
 }
 
 .home p{
@@ -188,21 +181,17 @@ header .navbar ul li a:hover{
     padding: 1rem 0;
 }
 
-
-
-
 .home .post{
     padding:1rem 0;
 }
 
 .home .post span{
     font-size: 3rem;
-    color: var(--yellow);
+    color: var(--rose);
 }
+/***************** HOME End *************************/
 
-/* home */
-
-/* ********************about ************************/
+/***************** ABOUT Start *************************/
 .about .row{
     display: flex;
     align-items: center;
@@ -219,7 +208,7 @@ header .navbar ul li a:hover{
 
 .about .row .info h3{
     font-size: 2rem;
-    color:var(--yellow);
+    color:var(--rose);
     padding:1rem 0;
     font-weight: normal;
 }
@@ -228,7 +217,6 @@ header .navbar ul li a:hover{
     color:#eee;
     padding:0 .5rem;
 }
-
 
 .about .row .counter{
     flex:1 1 48rem;
@@ -270,9 +258,8 @@ header .navbar ul li a:hover{
     top:0; left: 0;
     height:100%;
     width:100%;
-    background:var(--yellow);
+    background:var(--rose);
 }
-
 
 .about .row .counter .skills .progress:nth-child(1) .bar span{
     width:95%;
@@ -291,12 +278,9 @@ header .navbar ul li a:hover{
 .about .row .counter .skills .progress:nth-child(5) .bar span{
     width:90%;
 }
+/***************** ABOUT End *************************/
 
-
-
-/**************** Education*********************** */
-
-
+/***************** EDUCATION Start *************************/
 .education .box-container{
     display: flex;
     align-items: center;
@@ -344,12 +328,11 @@ header .navbar ul li a:hover{
     text-align: center;
     font-size: 2rem;
     color:#fff;
-    background:var(--yellow);
+    background:var(--rose);
 }
+/***************** EDUCATION End *************************/
 
-
-/************** Portofolio *****************/
-
+/***************** PORTFOLIO Start *************************/
 .portfolio .box-container{
     display: flex;
     align-items: center;
@@ -376,12 +359,9 @@ header .navbar ul li a:hover{
 .portfolio .box-container .box:hover img{
     transform: scale(1.2);
 }
+/***************** PORTFOLIO End *************************/
 
-
-
-
-/********************* Contact *****************/
-
+/***************** CONTACT Start *************************/
 .contact .row{
     display: flex;
     align-items: center;
@@ -425,7 +405,6 @@ header .navbar ul li a:hover{
     padding:1rem;
     color: red;
     font-size: 1.7rem;
-    
 }
 
 .contact .row .content .title{
@@ -446,20 +425,13 @@ header .navbar ul li a:hover{
 
 .contact .row .content .info h3 i{
     padding-right: 1rem;
-    color:var(--yellow);
+    color:var(--rose);
 }
 
 .contact .row .content .share{
-    /* position: absolute;
-    left:50%; bottom:5rem; */
-    /* transform: translateX(-50%); */
     display: flex;
     padding:1rem;
     flex-wrap: wrap;
-    /* border-radius: 1rem;
-    background: rgba(255,255,255,.1);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-    transition: .2s linear; */
 }
 
 .contact .row .content .share a{
@@ -476,11 +448,9 @@ header .navbar ul li a:hover{
     background:rgba(255,255,255,.5);
     color:#555;
 }
+/***************** CONTACT End *************************/
 
-
-
-
-/* media queries  */
+/***************** RESPONSIVE DESING *************************/
 
 @media (max-width:1200px){
 
