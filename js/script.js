@@ -48,6 +48,10 @@ $(document).ready(function(){
 
 const contactForm = document.getElementById("formContacto")
 const errorDiv = document.getElementById("error")
+const i1 = document.getElementById("formContactoId")
+const i2 = document.getElementById("formContactoName")
+const i3 = document.getElementById("formContactoAsunt")
+const i4 = document.getElementById("formContactoMessage")
 
 contactForm.onsubmit = function(event){
     event.preventDefault()
@@ -61,6 +65,10 @@ contactForm.onsubmit = function(event){
     if(nombre!="" && email!="" && asunto!="" && mensaje!=""){
         console.log("Datos correctos!")
         event.target.submit()
+        i1.value=""
+        i2.value=""
+        i3.value=""
+        i4.value=""
     }else{
         errorDiv.innerHTML=""
         const p = document.createElement("p")
