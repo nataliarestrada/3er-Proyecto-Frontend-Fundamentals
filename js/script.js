@@ -69,6 +69,7 @@ contactForm.onsubmit = function(event){
         i2.value=""
         i3.value=""
         i4.value=""
+        errorDiv.innerHTML=""
     }else{
         errorDiv.innerHTML=""
         const p = document.createElement("p")
