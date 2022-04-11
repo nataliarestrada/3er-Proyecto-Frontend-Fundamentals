@@ -5,7 +5,6 @@ var type = new Typed('.typing-text',{
 });
 
 
-
 $(document).ready(function(){
 
     $('#menu').click(function(){
